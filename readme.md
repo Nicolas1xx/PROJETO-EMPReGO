@@ -2,10 +2,18 @@
 
 # **Emprego App – Plataforma de Vagas de Emprego**
 
+
+
 ## 🚀 **Visão Geral do Projeto**  
 O **Emprego App** é uma plataforma web desenvolvida para conectar empresas e candidatos de forma prática e moderna. O sistema foi construído para exibir vagas de emprego de maneira intuitiva e acessível, proporcionando uma experiência fluida tanto para empresas quanto para candidatos. A interface foi projetada para ser adaptável, com uma experiência diferenciada para dispositivos móveis e desktops.
 
 ---
+
+**Índice**
+- [Principais funcionalidades](#principais-funionalidades)
+- [Tecnologias utilizadas](#tecnologias-utilizadas)
+- [Design e estilo](#design-e-estilo)
+- [Como executar o projeto](#como-executar-o-projeto)
 
 ## 🌟 **Principais Funcionalidades**
 
