@@ -10,10 +10,10 @@ O **Emprego App** é uma plataforma web desenvolvida para conectar empresas e ca
 ---
 
 **Índice**
-- [Principais funcionalidades](#principais-funionalidades)
-- [Tecnologias utilizadas](#tecnologias-utilizadas)
-- [Design e estilo](#design-e-estilo)
-- [Como executar o projeto](#como-executar-o-projeto)
+- [Principais Funcionalidades](#principais-funionalidades)
+- [Tecnologias Utilizadas](#tecnologias-utilizadas)
+- [Design e Estilo](#design-e-estilo)
+- [Como Executar o Projeto](#como-executar-o-projeto)
 
 ## 🌟 **Principais Funcionalidades**
 
