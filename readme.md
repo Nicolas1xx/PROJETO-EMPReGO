@@ -10,12 +10,12 @@ O **Emprego App** é uma plataforma web desenvolvida para conectar empresas e ca
 ---
 
 **Índice**
-- [Principais Funcionalidades](#funcionalidades)
+- [Funcionalidades](#funcionalidades)
 - [Tecnologias Utilizadas](#tecnologias-utilizadas)
-- [Design e Estilo](#design)
+- [Design](#design)
 - [Como Executar o Projeto](#executar-projeto)
 
-## 🌟 **Principais Funcionalidades**
+## 🌟 **Funcionalidades**
 
 ### **Para Candidatos:**
 - **Visualização das vagas**: As vagas são apresentadas em cards, permitindo uma navegação clara e objetiva.
@@ -36,7 +36,7 @@ O **Emprego App** é uma plataforma web desenvolvida para conectar empresas e ca
 
 ---
 
-## 🎨 **Design e Estilo**
+## 🎨 **Design**
 
 O layout do **Emprego App** foi projetado para ser simples e elegante. Usando o **Bootstrap** como base para garantir a responsividade, ele adapta o conteúdo automaticamente para dispositivos de diferentes tamanhos, com uma interface limpa e moderna.
 
