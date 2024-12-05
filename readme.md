@@ -1,68 +1,132 @@
-![PROJETO EMPREGO](../PROJETO%20EMPReGO/static/logo/EmpreLOGO.png)  
-# Meu Projeto Emprego  
+Aqui está um modelo de `README.md` bem estruturado para o seu projeto. Ele segue boas práticas de documentação e inclui todas as informações relevantes para quem for usar ou contribuir com o projeto.
 
-**Descrição:**  
-Meu Projeto Emprego é uma plataforma voltada para facilitar a conexão entre empresas que oferecem vagas de emprego e candidatos em busca de oportunidades. O objetivo é tornar o processo de recrutamento e seleção mais eficiente e acessível, promovendo uma interação transparente e direta entre empresas e candidatos.  
+---
 
-A aplicação permite que empresas publiquem vagas detalhadas, categorizadas por áreas de atuação e níveis de experiência, enquanto os candidatos podem explorar essas oportunidades, cadastrar-se e candidatar-se de forma prática. Além disso, o sistema oferece ferramentas como filtros de busca e perfis personalizáveis, garantindo que ambas as partes encontrem rapidamente o que procuram.  
+# Sistema de Gerenciamento de Vagas e Candidaturas
 
-Meu Projeto Emprego resolve o problema da descentralização de informações sobre vagas de emprego, reunindo ofertas em um único local confiável. Isso torna a busca por oportunidades e o preenchimento de vagas mais ágil, eficiente e acessível para todos os envolvidos no mercado de trabalho.  
+Um sistema web desenvolvido com Flask para gerenciar vagas de emprego e suas respectivas candidaturas.
 
-## Índice  
-- Funcionalidades  
-- Tecnologias Utilizadas  
-- Autores  
-- Licença  
+## 📋 Funcionalidades
 
-## Funcionalidades  
-### Para Empresas:  
-1. **Cadastro de Vagas:**  
-   - Empresas podem criar vagas detalhadas, incluindo descrição, requisitos, local, e benefícios.  
-2. **Gerenciamento de Vagas:**  
-   - Editar, excluir ou atualizar as informações das vagas já cadastradas.  
-   - Visualizar a lista de candidatos inscritos para cada vaga.  
-3. **Dashboard Personalizado:**  
-   - Painel de controle que exibe métricas e informações sobre o status das vagas e os candidatos.  
-4. **Filtros Avançados:**  
-   - Ferramenta para pesquisar candidatos por habilidades, experiência ou qualificações específicas.  
+- **Gestão de Vagas**:
+  - Exibição de vagas disponíveis.
+  - Cadastro de novas vagas (somente para usuários autenticados como empresas).
 
-### Para Candidatos:  
-1. **Cadastro de Perfil:**  
-   - Criar um perfil personalizado com informações como formação, habilidades, experiência e contato.  
-2. **Busca de Vagas:**  
-   - Ferramentas de busca com filtros por área de atuação, localização, nível de experiência e tipo de contrato.  
-3. **Candidatura Simples:**  
-   - Possibilidade de se candidatar a vagas com um único clique, utilizando o perfil já preenchido.  
-4. **Favoritos:**  
-   - Opção de marcar vagas de interesse para candidatura futura.  
+- **Gestão de Candidaturas**:
+  - Envio de candidaturas com informações pessoais e upload de currículo.
+  - Visualização de candidatos para uma vaga específica.
+  - Exclusão de candidaturas, incluindo o arquivo de currículo.
 
-### Funcionalidades Gerais:  
-1. **Login e Registro:**  
-   - Sistema de autenticação separado para candidatos e empresas.  
-2. **Notificações:**  
-   - Alerta para candidatos sobre novas vagas compatíveis com seu perfil e para empresas sobre novas candidaturas.  
-3. **Interface Responsiva:**  
-   - Plataforma otimizada para acesso em dispositivos móveis e desktops.  
-4. **Sistema de Moderação:**  
-   - Controle para garantir que apenas vagas e perfis autênticos sejam publicados.  
-5. **Feedback Rápido:**  
-   - Empresas podem enviar atualizações aos candidatos sobre o status de suas candidaturas.  
-6. **Página de Ajuda:**  
-   - Suporte para dúvidas frequentes e tutorial de uso da plataforma.  
+- **Outras Funcionalidades**:
+  - Download dos currículos enviados.
+  - Mensagens de erro e validações para melhorar a experiência do usuário.
 
-## Tecnologias Utilizadas  
-- **Linguagens:**  
+---
 
-![HTML 5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)  
-![CSS](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)  
-![JavaScript](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E)  
+## 🚀 Tecnologias Utilizadas
 
-- **Frameworks:**  
+- **Linguagem Backend**: Python
+- **Framework**: Flask
+- **Banco de Dados**: MySQL
+- **Frontend**: HTML, CSS (com Bootstrap), e Jinja2
+- **Outras Bibliotecas**:
+  - `os`: Para manipulação de arquivos.
+  - `secure_filename`: Para assegurar nomes de arquivos válidos.
+  - `flash`: Para exibir mensagens ao usuário.
 
-![Bootstrap](https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white)  
+---
 
-## Autores  
-- Nicolas Ricardo - nicolas-ricardo - nicolas.leao.senai@gmail.com  
+## 🛠️ Instalação e Configuração
 
-## Licença  
-Este projeto está licenciado sob a Licença MIT - veja o arquivo LICENSE para mais detalhes.
+1. **Clone o repositório**:
+   ```bash
+   git clone https://github.com/seu-usuario/sistema-vagas.git
+   cd sistema-vagas
+   ```
+
+2. **Instale as dependências**:
+   Certifique-se de que você possui o Python instalado e execute:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+3. **Configure o Banco de Dados**:
+   - Crie um banco de dados no MySQL e ajuste as configurações no arquivo `app.py` na função `conectar_db()`.
+   - Execute o script de criação de tabelas (se disponível):
+     ```sql
+     CREATE TABLE vaga (...);
+     CREATE TABLE candidato (...);
+     ```
+
+4. **Configure a pasta de uploads**:
+   - Certifique-se de que a pasta definida na variável `UPLOAD_FOLDER` existe no sistema.
+
+5. **Execute o servidor**:
+   ```bash
+   python app.py
+   ```
+   O sistema estará disponível em `http://127.0.0.1:5000`.
+
+---
+
+## 🖥️ Estrutura do Projeto
+
+```
+sistema-vagas/
+│
+├── templates/            # Arquivos HTML
+├── static/               # Arquivos CSS, JS e imagens
+├── uploads/              # Diretório para currículos enviados
+├── app.py                # Arquivo principal do Flask
+├── requirements.txt      # Dependências do projeto
+└── README.md             # Documentação do projeto
+```
+
+---
+
+## 💡 Funcionalidades em Detalhe
+
+### Enviar Candidatura
+1. Acesse uma vaga disponível.
+2. Preencha o formulário com nome, e-mail, telefone e envie seu currículo (formatos aceitos: PDF, DOC, DOCX, TXT).
+3. Após o envio, uma mensagem de sucesso será exibida.
+
+### Visualizar e Gerenciar Candidaturas
+- As empresas podem visualizar a lista de candidatos associados a uma vaga.
+- É possível fazer o download dos currículos ou excluir um candidato.
+
+---
+
+## 🔒 Requisitos de Segurança
+
+- **Validação de Arquivos**: Apenas arquivos permitidos podem ser enviados.
+- **Diretório de Upload Seguro**: Currículos são armazenados em uma pasta protegida.
+
+---
+
+## 🤝 Contribuição
+
+1. Faça um fork do repositório.
+2. Crie uma branch para a sua feature:
+   ```bash
+   git checkout -b feature/sua-feature
+   ```
+3. Faça um commit das suas alterações:
+   ```bash
+   git commit -m "Adiciona nova feature"
+   ```
+4. Faça o push para a sua branch:
+   ```bash
+   git push origin feature/sua-feature
+   ```
+5. Abra um Pull Request.
+
+---
+
+## 📄 Licença
+
+Este projeto está sob a licença [MIT](LICENSE).
+
+---
+
+Se precisar de algo mais específico, como adicionar exemplos de código ou screenshots do projeto, é só avisar! 🚀
