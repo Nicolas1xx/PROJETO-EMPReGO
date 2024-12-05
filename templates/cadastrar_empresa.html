@@ -1,0 +1,118 @@
+{% extends "base.html" %}
+
+{% block title %}EmpreGO! - Cadastrar Empresa{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <h1>Cadastrar Nova Empresa</h1>
+            
+            {% if msg_erro %}  <!-- Exibe mensagem de erro, se houver -->
+                <div class="alert alert-danger" role="alert">
+                    {{ msg_erro }}
+                </div>
+            {% endif %}
+
+            <form action="/cadastrar_empresa" method="post" class="needs-validation" novalidate>
+                <div class="mb-3">
+                    <label for="nome_empresa" class="form-label">Nome Fantasia da Empresa</label>
+                    <input type="text" name="nome_empresa" id="nome_empresa" class="form-control" required placeholder="Nome da empresa">
+                    <div class="valid-feedback">
+                        Informação válida!
+                    </div>
+                    <div class="invalid-feedback">
+                        Preencha o nome fantasia da empresa.
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="cnpj" class="form-label">CNPJ</label>
+                    <input type="text" name="cnpj" id="cnpj" maxlength="18" class="form-control" required placeholder="Somente números">
+                    <div class="valid-feedback">
+                        Informação válida!
+                    </div>
+                    <div class="invalid-feedback">
+                        Informe um CNPJ válido com 14 dígitos.
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="telefone" class="form-label">Telefone de contato</label>
+                    <input type="text" name="telefone" id="telefone" maxlength="15" class="form-control" required placeholder="Somente números">
+                    <div class="valid-feedback">
+                        Informação válida!
+                    </div>
+                    <div class="invalid-feedback">
+                        Preencha o telefone da empresa com 11 dígitos.
+                    </div>
+                </div>
+
+                <h2>Informações para acesso da plataforma</h2>
+
+                <div class="mb-3">
+                    <label for="email" class="form-label">E-mail (LOGIN)</label>
+                    <input type="email" name="email" id="email" class="form-control" required placeholder="E-mail para login">
+                    <div class="valid-feedback">
+                        Informação válida!
+                    </div>
+                    <div class="invalid-feedback">
+                        Preencha um e-mail válido.
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="senha" class="form-label">Senha</label>
+                    <input type="password" name="senha" id="senha" class="form-control" required placeholder="Senha">
+                    <div class="valid-feedback">
+                        Informação válida!
+                    </div>
+                    <div class="invalid-feedback">
+                        Informe uma senha.
+                    </div>
+                </div>
+
+                <div class="d-flex justify-content-center mb-3">
+                    <button type="submit" class="btn btn-primary">Cadastrar Empresa</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/inputmask@5.0.8/dist/inputmask.min.js"></script>
+<script>
+    (() => {
+        'use strict'
+
+        const forms = document.querySelectorAll('.needs-validation')
+
+        Array.from(forms).forEach(form => {
+            form.addEventListener('submit', event => {
+                if (!form.checkValidity()) {
+                    event.preventDefault()
+                    event.stopPropagation()
+                }
+
+                form.classList.add('was-validated')
+            }, false)
+        })
+
+        // Máscara para CNPJ
+        const cnpjField = document.getElementById("cnpj");
+        Inputmask({
+            mask: "99.999.999/9999-99",
+            placeholder: "",
+            clearMaskOnLostFocus: true
+        }).mask(cnpjField);
+
+        // Máscara para Telefone
+        const telefoneField = document.getElementById("telefone");
+        Inputmask({
+            mask: "(99) 99999-9999",
+            placeholder: "",
+            clearMaskOnLostFocus: true
+        }).mask(telefoneField);
+    })()
+</script>
+{% endblock %}

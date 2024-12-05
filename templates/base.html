@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+
+    <!-- Link do Bootstrap -->
+    <link rel="stylesheet" href="../static/bootstrap/css/lux.css">
+
+    <!-- Link do CSS próprio -->
+    <link rel="stylesheet" href="../static/style.css">
+  </head>
+  
+  <body class="d-flex flex-column">
+    <!-- Header para dispositivos maiores que md -->
+    <div class="d-none d-md-block">
+      {% include "header.html" %}
+    </div>
+
+    <!-- Texto específico para dispositivos menores -->
+    <div class="d-block d-md-none">
+      Texto para celular
+    </div>
+
+    <!-- Corpo principal -->
+    <main class="container mt-5 flex-fill">
+      {% block content %}
+      {% endblock %}
+    </main>
+
+    <!-- Rodapé -->
+    {% include "footer.html" %}
+
+    <!-- Scripts do Bootstrap -->
+    <script src="../static/bootstrap/js/bootstrap.js"></script>
+  </body>
+</html>
+

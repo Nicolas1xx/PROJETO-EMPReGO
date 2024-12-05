@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block title %}EmpreGO!{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <h2>Lista de Candidatos</h2>
+        
+        {% for candidato in candidatos %}
+            <div class="card mb-3">
+                <div class="card-body">
+                    <h5 class="card-title">{{ candidato.nome }}</h5>
+                    <p class="card-text">
+                        <strong>Email:</strong> {{ candidato.email }} <br>
+                        <strong>Telefone:</strong> {{ candidato.telefone }} 
+                    </p>
+                    <div class="d-flex justify-content-between">
+                        <a href="/download/{{ candidato.id_candidato }}" class="btn btn-primary">Baixar currículo</a>
+                        <a href="{{ url_for('excluir_candidato', id_candidato=candidato.id_candidato, id_vaga=id_vaga) }}" 
+                           class="btn btn-danger" onclick="return confirm('Tem certeza que deseja excluir este candidato e o currículo?')">Excluir</a>
+                    </div>
+                </div>
+            </div>
+        {% else %}
+            <p class="alert alert-warning">Nenhum candidato cadastrado</p>
+        {% endfor %}
+    </div>
+{% endblock %}
