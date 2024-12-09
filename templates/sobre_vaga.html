@@ -33,7 +33,9 @@
                     <p class="card-text"><strong>Tipo:</strong> {{ vaga.tipo }}</p>
 
                     <!-- Botão de candidatura -->
-                    <a href="{{ url_for('candidatar_vaga', id_vaga=vaga.id_vaga) }}" class="btn btn-primary">Candidatar-se</a>
+                    {% if not session %}
+                        <a href="{{ url_for('candidatar_vaga', id_vaga=vaga.id_vaga) }}" class="btn btn-primary">Candidatar-se</a>
+                    {% endif %}
                 </div>
             </div>
         </div>
