@@ -1,6 +1,4 @@
-Aqui está um modelo de `README.md` bem estruturado para o seu projeto. Ele segue boas práticas de documentação e inclui todas as informações relevantes para quem for usar ou contribuir com o projeto.
 
----
 
 # Sistema de Gerenciamento de Vagas e Candidaturas
 
@@ -128,5 +126,3 @@ sistema-vagas/
 Este projeto está sob a licença [MIT](LICENSE).
 
 ---
-
-Se precisar de algo mais específico, como adicionar exemplos de código ou screenshots do projeto, é só avisar! 🚀
